@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "my_string.h"
+int main(int argc, char* argv[])
+{
+int s,x,y;
+MY_STRING hMy_string = NULL;
+MY_STRING hMy_string_2= NULL;
+char* word="app";
+char* word2="apple"
+
+hMy_string=my_string_init_c_string(word);
+hMy_string_2=my_string_init_c_string(word2);
+x=my_string_get_capacity(hMy_string);
+printf("capacity is %d\n",x);
+y=my_string_get_size(hMy_string);
+printf("size is %d\n",y);
+
+s=my_string_compare(hMy_string, hMy_string_2);
+printf("%d\n",s);
+
+my_string_destroy(&hMy_string);
+return 0;
+}
+ 
+
+
